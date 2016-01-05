@@ -1,0 +1,98 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+        font-size: .9em;
+    }
+    .RKheader {
+        font-size: 2em;
+        color: #2dc9d7 !important;
+    }
+    .demoimg {
+        margin: 15% auto !important;
+        padding: 0 !important;
+    }
+    h1 {
+        color: white !important;
+    }
+    .imgheader {
+        max-height: 248px !important;
+        height: 248px !important;
+        min-height: 248px !important;
+        height: auto !important;
+    }
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    width: 100%;
+}
+
+.headerimg {
+    position: absolute;
+}
+
+.ContentBox {
+    height: 800px;
+}
+
+.ContentBoxa {
+    border-right: 1px grey solid;
+    border-bottom: 1px grey solid;
+    margin-bottom: 10px;
+}
+
+.ContentBoxb {
+    border-bottom: 1px grey solid;
+    margin-bottom: 10px;
+}
+
+.RKheader {
+    color: #2dc9d7;
+    text-align: center;
+}
+
+.RKtext {
+    color: black;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.RKtextul {
+    color: black;
+    font-size: 1.5em;
+}
+
+.RKtextul2 {
+    color: black;
+    font-size: 1.5em;
+    list-style-type: none;
+}
+
+.demoimg {
+    margin: auto;
+    padding: 10% 10% 0 10%;
+}
+
+.imghead {
+    position: absolute;
+}
+
+.imgh {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.imgheader {
+    /*    height: 400px;
+    min-height: 400px;*/
+    width: 100%;
+}
