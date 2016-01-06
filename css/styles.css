@@ -166,3 +166,10 @@ input-placeholder {
 :-ms-input-placeholder {
     color: #000000;
 }
+
+.modalulbtn {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 15px 5px;
+}

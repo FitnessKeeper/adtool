@@ -195,22 +195,47 @@ $('#modaledit').click(function () {
     $('#c1title3edit').change(function () {
         $('#c1title3').html(title3);
     }).change();
+    var phrases = [];
+    var phrases2 = [];
+
+    $('#c1ultext1edit').each(function () {
+        var phrase = '';
+        $(this).find('li').each(function () {
+            var current = $(this);
+            if (current.children().size() > 0) {
+                return true;
+            }
+            phrases.push($(this).text());
+        });
+        $('#c1ultext1').html(c1ulFun(phrases));
+
+    });
+
+    $('#c1ultext2edit').each(function () {
+        var phrase = '';
+        $(this).find('li').each(function () {
+            var current = $(this);
+            if (current.children().size() > 0) {
+                return true;
+            }
+            phrases2.push($(this).text());
+        });
+        $('#c1ultext2').html(c1ulFun(phrases2));
+
+    });
+
 });
 
-$('#addNewContext').click(function () {
-        $(this).html("").attr('contenteditable', 'true');
-    })
-    // on hit enter,
-    .keyup(function (e) {
-        if (e.keyCode == 13) {
-            var val = $(this).text();
-            $(this)
-                // create a new li item
-                .before("<li>" + val + "</li>")
-                // set plus sign again
-                .html("+");
-            // make contenteditable to false, when clicked the process start again.
+$('#c1ul1btn').click(function () {
+    $('#c1ultext1edit').append('<li contenteditable="true"></li>');
+});
+$('#c1ul2btn').click(function () {
+    $('ul#c1ultext1edit > :last-child').remove();
+});
 
-            e.preventDefault();
-        }
-    });
+$('#c1ul3btn').click(function () {
+    $('#c1ultext2edit').append('<li contenteditable="true"></li>');
+});
+$('#c1ul4btn').click(function () {
+    $('ul#c1ultext2edit > :last-child').remove();
+});
