@@ -27,6 +27,12 @@
         min-height: 248px !important;
         height: auto !important;
     }
+    .pdfcreate {
+        display: none;
+    }
+    .edit {
+        display: none;
+    }
 }
 
 body {
@@ -95,4 +101,22 @@ body {
     /*    height: 400px;
     min-height: 400px;*/
     width: 100%;
+}
+
+li {}
+
+.pdfcreate {
+    color: black;
+}
+
+.editbtn {
+    position: absolute;
+    top: 5;
+    left: 5;
+    width: 20px;
+    height: 20px;
+}
+
+#myModal {
+    color: black !important;
 }

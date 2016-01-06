@@ -21,58 +21,90 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="imgheader">
+        <div class="pdfcreate">
+            <form action="" class="pdftype">
+                <fieldset class="form-group">
+                    <label for="productselect">Select Product</label>
+                    <select class="form-control" id="productselect" onchange="onChange()">
+                        <option value="Select">Select</option>
+                        <option value="Challenges">Challenges</option>
+                        <option value="Sunday Runday">Sunday Runday</option>
+                        <option value="Workout Rewards">Workout Rewards</option>
+                        <option value="Feed Ad">Feed Ad</option>
+                        <option value="Runkeeper User Network">Runkeeper User Network</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="pdf">
+            <div class="row">
+                <div class="imgheader">
 
-                <img id="headerimg" class="imghead img-responsive" src="%data%" alt="">
+                    <img id="headerimg" class="imghead img-responsive" alt="">
+                    <img id="headerimgtext" class="imghead img-responsive" alt="">
 
-                <img id="headerimgtext" class="imghead img-responsive" src="%data%" alt="">
 
+                </div>
 
             </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-xs-6 col-lg-6 col-sm-6 ContentBoxa">
+                    <div class="ContentBox">
+                        <div class="edit">
+                            <input type="image" class="editbtn" src="img/pencil_and_paper-512.png" data-toggle="modal" data-target="#myModal" />
+                        </div>
+                        <h1 id="c1title1" class="RKheader"></h1>
 
-        </div>
-        <div class="clearfix"></div>
-        <div class="row">
-            <div class="col-xs-6 col-lg-6 col-sm-6 ContentBoxa">
-                <div class="ContentBox">
-                    <h1 class="RKheader">What is a Challenge?</h1>
+                        <p id="c1text1" class="RKtext"></p>
 
-                    <p class="RKtext">A branded, immersive fitness experience platform that provides multiple brand touchpoints while engaging users toward a fitness goal</p>
+                        <h1 id="c1title2" class="RKheader"></h1>
 
-                    <h1 class="RKheader">Why should I run a Challenge?</h1>
+                        <p id="c1text2" class="RKtext">
 
-                    <p class="RKtext">You are looking to improve:
+                            <ul id="c1ultext1" class="RKtextul">
 
-                        <ul class="RKtextul">
-                            <li>Brand awareness</li>
-                            <li>Intent to purchase</li>
-                            <li>Engagement</li>
+                            </ul>
+                        </p>
+                        <h1 id="c1title3" class="RKheader"></h1>
+                        <ul id="c1ultext2" class="RKtextul2">
+
                         </ul>
-                    </p>
-                    <h1 class="RKheader">Campaign Details</h1>
-                    <ul class="RKtextul2">
-                        <li>Compete as Individual or Team</li>
-                        <li>Sustained time spent with brand</li>
-                        <li>Multiple Touch points</li>
-                        <li>Expert Demo Targeting</li>
-                        <li>Interactive Media Support</li>
-                        <li>In-House Creative Services</li>
-                        <li>Comprehensive Custom Wrap Report</li>
-                    </ul>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-6 col-lg-6 col-sm-6 ContentBoxb">
-                <div class="ContentBox">
-                    <h1 class="RKheader">Community Demographics</h1>
-                    <img class="demoimg" src="img/MenWomen.png" alt="Men vs Women" width="100%">
-                    <img class="demoimg" src="img/millenials.png" alt="Men vs Women" width="100%">
+                <div class="col-xs-6 col-lg-6 col-sm-6 ContentBoxb">
+                    <div class="ContentBox">
+                        <h1 id="c2title1" class="RKheader"></h1>
+                        <img id="c2img1" class="demoimg" alt="Men vs Women" width="100%">
+                        <img id="c2img2" class="demoimg" alt="Men vs Women" width="100%">
 
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="form-group">
+                            <textarea class="form-control" id="c1title1edit" rows="1"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
