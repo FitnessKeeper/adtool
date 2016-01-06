@@ -120,3 +120,49 @@ li {}
 #myModal {
     color: black !important;
 }
+
+#c1ultext1edit {
+    border: 1px #CCCCCC solid;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#c1ultext2edit {
+    border: 1px #CCCCCC solid;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.modalinput {
+    margin: 10px;
+    padding-right: 0 !important;
+    width: 98% !important;
+}
+
+textarea {
+    margin: 10px;
+    padding-right: 0 !important;
+    width: 98% !important;
+}
+
+input-placeholder {
+    color: #000000 !important;
+}
+
+:-webkit-input-placeholder {
+    color: #000000;
+}
+
+:-moz-placeholder {
+    /* older Firefox*/
+    color: #000000;
+}
+
+:-moz-placeholder {
+    /* Firefox 19+ */
+    color: #000000;
+}
+
+:-ms-input-placeholder {
+    color: #000000;
+}

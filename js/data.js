@@ -86,7 +86,26 @@ var c1ul2 = ["Compete as Individual or Team",
 c1ulFun = function (array) {
     var a = [];
     for (i = 0; i < array.length; i++) {
-        a.push('<li>' + array[i] + '</l>')
+        a.push('<li>' + array[i] + '</li>')
+    }
+    return a;
+};
+
+c1ulFunEdit = function (callback, array) {
+    var a = [];
+    var cursorTasks = array.length;
+
+    function cursorTaskComplete() {
+        cursorTasks--;
+
+        if (cursorTasks <= 0) {
+            a.push('<li id="addNewContext" class="menu-item-divided>+</li>');
+            callback();
+        }
+    }
+    for (i = 0; i < array.length; i++) {
+        a.push('<li contenteditable="true">' + array[i] + '</li>');
+        cursorTaskComplete();
     }
     return a;
 };
@@ -150,5 +169,44 @@ function onChange() {
     firstcolumn.display();
 
     secondcolumn.display();
+    $('#c1title1edit').attr("placeholder", firstcolumn.c1title1);
+    $('#c1text1edit').attr("placeholder", firstcolumn.c1text1);
+    $('#c1title2edit').attr("placeholder", firstcolumn.c1title2);
+    $('#c1text2edit').attr("placeholder", firstcolumn.c1text2);
+    $('#c1ultext1edit').html(c1ulFunEdit(function () {}, c1ul1));
+    $('#c1title3edit').attr("placeholder", firstcolumn.c1title3);
+    $('#c1ultext2edit').html(c1ulFunEdit(function () {}, c1ul2));
+
 }
+
 onChange();
+$('#modaledit').click(function () {
+    var title1 = $('#c1title1edit').val();
+    $('#c1title1').html(title1);
+    var text1 = $('#c1title1edit').val();
+    $('#c1text1').html(text1);
+    var title2 = $('#c1title2edit').val();
+    $('#c1title2').html(title2);
+    var text2 = $('#c1text2edit').val();
+    $('#c1text2').html(text2);
+    var title3 = $('#c1title3edit').val();
+    $('#c1title3').html(title3);
+});
+
+$('#addNewContext').click(function () {
+        $(this).html("").attr('contenteditable', 'true');
+    })
+    // on hit enter,
+    .keyup(function (e) {
+        if (e.keyCode == 13) {
+            var val = $(this).text();
+            $(this)
+                // create a new li item
+                .before("<li>" + val + "</li>")
+                // set plus sign again
+                .html("+");
+            // make contenteditable to false, when clicked the process start again.
+
+            e.preventDefault();
+        }
+    });
