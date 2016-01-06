@@ -27,10 +27,9 @@
         min-height: 248px !important;
         height: auto !important;
     }
-    .pdfcreate {
-        display: none;
-    }
-    .edit {
+    .pdfcreate,
+    .edit,
+    input {
         display: none;
     }
 }
@@ -111,8 +110,8 @@ li {}
 
 .editbtn {
     position: absolute;
-    top: 5;
-    left: 5;
+    top: 5px;
+    left: 5px;
     width: 20px;
     height: 20px;
 }
@@ -172,4 +171,24 @@ input-placeholder {
     width: 20px;
     height: 20px;
     margin: 0 5px 15px 5px;
+}
+
+.editbtn2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#myModal2 {
+    color: black !important;
+}
+
+.editbtn3 {
+    position: absolute;
+    left: 62px;
+    top: 80px;
+    width: 20px;
+    height: 20px;
 }

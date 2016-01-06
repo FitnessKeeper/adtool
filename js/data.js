@@ -169,6 +169,8 @@ function onChange() {
     $('#c1ultext1edit').html(c1ulFunEdit(c1ul1));
     $('#c1title3edit').attr("value", firstcolumn.c1title3);
     $('#c1ultext2edit').html(c1ulFunEdit(c1ul2));
+    $('#c2title1edit').attr("value", secondcolumn.c2title1);
+
 
 }
 
@@ -224,6 +226,12 @@ $('#modaledit').click(function () {
 
     });
 
+});
+$('#modaledit2').click(function () {
+    $('#c2title1edit').change(function () {
+        var title1 = $('#c2title1edit').val();
+        $('#c2title1').html(title1);
+    }).change();
 });
 
 $('#c1ul1btn').click(function () {

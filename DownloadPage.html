@@ -39,9 +39,11 @@
         <div class="pdf">
             <div class="row">
                 <div class="imgheader">
-
                     <img id="headerimg" class="imghead img-responsive" alt="">
                     <img id="headerimgtext" class="imghead img-responsive" alt="">
+                    <input type="image" class="editbtn3" src="img/pencil_and_paper-512%20copy.png" data-toggle="modal" data-target="#myModal" />
+
+
 
 
                 </div>
@@ -75,6 +77,9 @@
                 </div>
                 <div class="col-xs-6 col-lg-6 col-sm-6 ContentBoxb">
                     <div class="ContentBox">
+                        <div class="edit">
+                            <input type="image" class="editbtn2" src="img/pencil_and_paper-512.png" data-toggle="modal" data-target="#myModal2" />
+                        </div>
                         <h1 id="c2title1" class="RKheader"></h1>
                         <img id="c2img1" class="demoimg" alt="Men vs Women" width="100%">
                         <img id="c2img2" class="demoimg" alt="Men vs Women" width="100%">
@@ -120,6 +125,29 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" id="modaledit" class="btn btn-default" data-dismiss="modal">Update</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Edit Ad Material</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control modalinput" id="c2title1edit" rows="1">
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="modaledit2" class="btn btn-default" data-dismiss="modal">Update</button>
                     </div>
                 </div>
 
