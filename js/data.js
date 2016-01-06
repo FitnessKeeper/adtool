@@ -91,21 +91,11 @@ c1ulFun = function (array) {
     return a;
 };
 
-c1ulFunEdit = function (callback, array) {
+c1ulFunEdit = function (array) {
     var a = [];
-    var cursorTasks = array.length;
 
-    function cursorTaskComplete() {
-        cursorTasks--;
-
-        if (cursorTasks <= 0) {
-            a.push('<li id="addNewContext" class="menu-item-divided>+</li>');
-            callback();
-        }
-    }
     for (i = 0; i < array.length; i++) {
         a.push('<li contenteditable="true">' + array[i] + '</li>');
-        cursorTaskComplete();
     }
     return a;
 };
@@ -169,28 +159,42 @@ function onChange() {
     firstcolumn.display();
 
     secondcolumn.display();
-    $('#c1title1edit').attr("placeholder", firstcolumn.c1title1);
-    $('#c1text1edit').attr("placeholder", firstcolumn.c1text1);
-    $('#c1title2edit').attr("placeholder", firstcolumn.c1title2);
-    $('#c1text2edit').attr("placeholder", firstcolumn.c1text2);
-    $('#c1ultext1edit').html(c1ulFunEdit(function () {}, c1ul1));
-    $('#c1title3edit').attr("placeholder", firstcolumn.c1title3);
-    $('#c1ultext2edit').html(c1ulFunEdit(function () {}, c1ul2));
+    $('#c1title1edit').attr("value", firstcolumn.c1title1);
+    $('#c1text1edit').html(firstcolumn.c1text1);
+    $('#c1title2edit').attr("value", firstcolumn.c1title2);
+    $('#c1text2edit').attr("value", firstcolumn.c1text2);
+    /*    (function () {
+            c1ulFunEdit(c1ul1);
+        })()*/
+    $('#c1ultext1edit').html(c1ulFunEdit(c1ul1));
+    $('#c1title3edit').attr("value", firstcolumn.c1title3);
+    $('#c1ultext2edit').html(c1ulFunEdit(c1ul2));
 
 }
 
 onChange();
 $('#modaledit').click(function () {
-    var title1 = $('#c1title1edit').val();
-    $('#c1title1').html(title1);
-    var text1 = $('#c1title1edit').val();
-    $('#c1text1').html(text1);
+    $('#c1title1edit').change(function () {
+        var title1 = $('#c1title1edit').val();
+        $('#c1title1').html(title1);
+    }).change();
+    // $('#c1title1').html(title1);
+    var text1 = $('#c1text1edit').val();
+    $('#c1text1edit').change(function () {
+        $('#c1text1').html(text1);
+    }).change();
     var title2 = $('#c1title2edit').val();
-    $('#c1title2').html(title2);
+    $('#c1title2edit').change(function () {
+        $('#c1title2').html(title2);
+    }).change();
     var text2 = $('#c1text2edit').val();
-    $('#c1text2').html(text2);
+    $('#c1text2edit').change(function () {
+        $('#c1text2').html(text2);
+    }).change();
     var title3 = $('#c1title3edit').val();
-    $('#c1title3').html(title3);
+    $('#c1title3edit').change(function () {
+        $('#c1title3').html(title3);
+    }).change();
 });
 
 $('#addNewContext').click(function () {
